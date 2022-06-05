@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.weather_temp {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700; }
+
+.navigation ul,
+.navigation ul li {
+  all: unset; }
+
+.navigation ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.25);
+  font-family: "Oswald", sans-serif;
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3); }
+
+.navigation a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  line-height: 1em;
+  padding: 10px;
+  display: block; }
+
+.navigation a i {
+  font-weight: normal; }
+
+#login {
+  cursor: pointer; }
+
+.fullscreenVideo {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  filter: brightness(0.75); }
+
+.heroBanner {
+  position: relative; }
+
+.heroTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  font-size: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0; }
+
+#loginModal .modal-body span {
+  display: grid;
+  grid-template-columns: 1fr;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px; }
+
+.modal-dialog {
+  max-width: 100%; }
+
+#loginModal .modal-content input,
+#flights_form input,
+#flights_form select,
+#flights_form button {
+  max-width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px; }
+
+#departure,
+#date,
+#destination,
+#passengers {
+  cursor: pointer; }
+
+#destinationsModal h4 i {
+  transform: rotate(90deg); }
+
+#flights_form input:focus {
+  outline-style: none;
+  box-shadow: none; }
+
+#departuresModal ul,
+#destinationsModal ul {
+  cursor: pointer;
+  margin: 0;
+  padding: 0 15px; }
+
+#departuresModal ul li:hover,
+#destinationsModal ul li:hover {
+  color: navy; }
+
+#passengersModal .modal-body {
+  display: grid;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px; }
+
+#passengersModal .modal-number {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+.passengers-label,
+.passengers-description {
+  grid-column: 1 / span 4; }
+
+.passengers-number {
+  grid-column: 5 / span 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  justify-content: flex-end; }
+
+#passengersModal .modal-number input {
+  width: 40px; }
+
+.passengers-label {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700; }
+
+.passengers-description {
+  font-size: 0.75em; }
+
+.hide-details {
+  opacity: 0;
+  z-index: -1; }
+
+.show-details {
+  opacity: 1;
+  z-index: 100; }
+
+#flights_form,
+#airport_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px; }
+
+#airport_info {
+  transition: all 1s;
+  transition-timing-function: ease-in-out;
+  height: 0; }
+
+#airport_info.show-details {
+  height: auto; }
+
+.content {
+  margin: 40px auto;
+  max-width: 1200px; }
+
+.footer {
+  text-align: center;
+  background-color: navy;
+  color: white;
+  padding: 40px; }
+
+#address,
+#weather,
+#map {
+  border-radius: 5px; }
+
+#address {
+  background-color: whitesmoke;
+  height: 261px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+#weather div {
+  display: flex;
+  justify-content: center; }
+
+h4 {
+  margin: 0; }
+
+.weather_place,
+.weather_details {
+  flex-direction: column; }
+
+.weather_place,
+.weather_icon,
+.weather_footer {
+  background-color: orange; }
+
+.weather_place {
+  padding-left: 10px;
+  border-radius: 5px 0 0; }
+
+.weather_place p {
+  margin: 0; }
+
+#weather div.weather_icon {
+  justify-content: right;
+  border-radius: 0 5px 0 0; }
+
+.weather_temp,
+.weather_details {
+  background-color: white; }
+
+.weather_temp {
+  font-size: 5em;
+  border-left: 1px solid orange; }
+
+#weather div.weather_details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  border-right: 1px solid orange; }
+
+.weather_details strong {
+  grid-column: 1 / span 2;
+  border-bottom: 1px solid gray; }
+
+.weather_footer {
+  grid-column: 1 / span 2;
+  padding: 10px;
+  border-radius: 0 0 5px 5px; }
+
+#map {
+  height: 261px; }
+
+@media only screen and (max-width: 1199px) {
+  .content {
+    margin: 0 10px; }
+  #flights_form,
+  #airport_info {
+    grid-template-columns: 1fr 1fr; }
+  #map_box {
+    grid-column: 1 / span 2; } }
+
+@media only screen and (max-width: 767px) {
+  * {
+    max-width: 100%; }
+  .navigation ul {
+    display: grid; }
+  #flights_form,
+  #airport_info {
+    grid-template-columns: 100%; }
+  #map_box {
+    grid-column: 1 / span 1; } }
+
