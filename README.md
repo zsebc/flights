@@ -6,10 +6,7 @@ This is a simple web application to buy airline tickets.
 
 ## Getting Started
 
-* Create a folder named "flights" on the desktop.
-* Open the "flights" folder in Visual Studio Code.
-* Open the Visual Studio Code terminal.
-* Type in terminal to install the webpack:
+* Open terminal and type to install the webpack:
 ```
 npm install webpack@5.66.0 --save
 ```
